@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Afolayan Favour - Software Developer CV</title>
+    <style>
+        @media print {
+            .no-print { display: none !important; }
+            body { margin: 0; padding: 0; font-size: 12px; }
+            .container { max-width: none; margin: 0; padding: 10px; }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #2c3e50;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .header .title {
+            font-size: 1.3em;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.9em;
+        }
+        
+        .contact-info span {
+            background: #ecf0f1;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #3498db;
+            text-transform: uppercase;
+        }
+        
+        .summary {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #3498db;
+            margin-bottom: 20px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .skill-category h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .skill-category ul {
+            list-style: none;
+        }
+        
+        .skill-category li {
+            padding: 2px 0;
+            color: #555;
+        }
+        
+        .skill-category li:before {
+            content: "• ";
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .experience-item {
+            margin-bottom: 25px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #27ae60;
+        }
+        
+        .experience-item h3 {
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .company {
+            color: #7f8c8d;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .period {
+            color: #95a5a6;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        
+        .experience-item ul {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .experience-item li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .experience-item li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .education-item {
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #9b59b6;
+        }
+        
+        .education-item h3 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .education-item .institution {
+            color: #7f8c8d;
+            font-weight: bold;
+        }
+        
+        .education-item .period {
+            color: #95a5a6;
+            font-style: italic;
+        }
+        
+        .project-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 6px;
+            border-left: 4px solid #f39c12;
+        }
+        
+        .project-item h3 {
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        
+        .languages {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .language {
+            background: #ecf0f1;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        
+        .download-section {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #e8f5e8;
+            border-radius: 8px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            margin: 0 10px;
+            transition: background 0.3s;
+        }
+        
+        .download-btn:hover {
+            background: #219a52;
+        }
+        
+        .print-btn {
+            background: #3498db;
+        }
+        
+        .print-btn:hover {
+            background: #2980b9;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 20px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="download-section no-print">
+        <h3>Download Options</h3>
+        <a href="#" class="download-btn" onclick="downloadAsPDF()">Download as PDF</a>
+        <a href="#" class="download-btn print-btn" onclick="window.print()">Print/Save as PDF</a>
+    </div>
+
+    <div class="container" id="cv-content">
+        <div class="header">
+            <h1>Modern_ui_dev</h1>
+            <div class="title">Software Developer</div>
+            <div class="contact-info">
+                <span>📞 +234 7041707321</span>
+                <span>✉️ Afolayanshem@gmail.com</span>
+                <span>📍 No 44 Iwo Street Offa Garage</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <div class="summary">
+                Passionate software developer with 3+ years of experience specializing in web, frontend, and mobile app development. Proven expertise in JavaScript, React, and React Native with a track record of building scalable, user-focused applications. Experience includes developing pharmaceutical apps with integrated payment gateways and video streaming platforms. Demonstrated ability to optimize backend systems, reduce processing time by 20%, and implement security best practices for financial applications.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend Technologies</h3>
+                    <ul>
+                        <li>React</li>
+                        <li>React Native</li>
+                        <li>Responsive Web Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend Technologies</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>.NET</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases & Tools</h3>
+                    <ul>
+                        <li>Firebase</li>
+                        <li>SQL Databases</li>
+                        <li>Supabase</li>
+                        <li>Git/Version Control</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <h3>Backend Developer (Freelance)</h3>
+                <div class="company">Fiverr</div>
+                <div class="period">2022 - 2023</div>
+                <ul>
+                    <li>Developed secure and scalable backend systems using Node.js and .NET, ensuring seamless data handling and robust performance across various applications</li>
+                    <li>Integrated RESTful APIs and managed database operations utilizing Firebase and SQL databases to store, retrieve, and manage data efficiently</li>
+                    <li>Implemented authentication and authorization features for web and mobile apps using JWT and OAuth2</li>
+                    <li>Optimized server performance and reduced latency by employing caching mechanisms and load balancing</li>
+                    <li>Collaborated with frontend developers to create well-documented and consistent APIs</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Frontend Web Developer (Freelance)</h3>
+                <div class="company">Upwork</div>
+                <div class="period">2022 - 2023</div>
+                <ul>
+                    <li>Created dynamic and responsive web applications using HTML, CSS, and JavaScript</li>
+                    <li>Incorporated modern frameworks like React to develop complex user interfaces</li>
+                    <li>Collaborated with clients to understand project needs and deliver tailored web solutions</li>
+                    <li>Implemented best practices in web design and accessibility, adhering to W3C standards</li>
+                    <li>Managed and optimized frontend performance using code splitting and lazy loading techniques</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h3>Frontend Developer Intern</h3>
+                <div class="company">Femtech ICT</div>
+                <div class="period">2021 - 2022</div>
+                <ul>
+                    <li>Developed and optimized secure API endpoints to enhance real-time data processing capabilities</li>
+                    <li>Conducted data analysis and generated reports on transaction trends</li>
+                    <li>Collaborated with cross-functional teams to improve user interfaces and accessibility</li>
+                    <li>Assisted in automating financial workflows, leading to a 20% reduction in manual processing time</li>
+                    <li>Researched and implemented security best practices for financial applications</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Computer Science</h3>
+                <div class="institution">Kwara State University</div>
+                <div class="period">2022 - 2026</div>
+            </div>
+            <div class="education-item">
+                <h3>Secondary Education</h3>
+                <div class="institution">St Anthony Secondary School</div>
+                <div class="period">2020 - 2022</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Key Projects</h2>
+            <div class="project-item">
+                <h3>Pharmaceutical Application</h3>
+                <p>Developed mobile application with integrated payment gateways, secure transaction processing, and user authentication. Technologies used: React Native, Firebase, Payment APIs</p>
+            </div>
+            <div class="project-item">
+                <h3>Video Streaming Platform</h3>
+                <p>Built YouTube-style interface with video playback capabilities, user management, and content delivery systems. Technologies used: React, Node.js, Database integration</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Problem Solving & Debugging</li>
+                        <li>Performance Optimization</li>
+                        <li>Security Implementation</li>
+                        <li>Code Review & Quality Assurance</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Collaboration & Communication</li>
+                        <li>Strong Time Management</li>
+                        <li>Client Relationship Management</li>
+                        <li>Agile Development</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Languages</h2>
+            <div class="languages">
+                <span class="language">English (Fluent)</span>
+                <span class="language">Yoruba (Native)</span>
+                <span class="language">Pidgin (Fluent)</span>
+                <span class="language">Hausa (Conversational)</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Certifications & Achievements</h2>
+            <ul style="list-style: none;">
+                <li style="margin-bottom: 8px;">✓ 20% reduction in manual processing time through workflow automation</li>
+                <li style="margin-bottom: 8px;">✓ Successfully delivered multiple client projects on Upwork and Fiverr</li>
+                <li style="margin-bottom: 8px;">✓ Expertise in emerging technologies including Web3</li>
+                <li style="margin-bottom: 8px;">✓ Strong portfolio of high-impact web and mobile applications</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function downloadAsPDF() {
+            // Hide download section before printing
+            const downloadSection = document.querySelector('.download-section');
+            downloadSection.style.display = 'none';
+            
+            // Trigger print dialog
+            window.print();
+            
+            // Show download section after printing
+            setTimeout(() => {
+                downloadSection.style.display = 'block';
+            }, 1000);
+        }
+        
+        // Alternative method using html2pdf if available
+        function downloadAsPDFAdvanced() {
+            const element = document.getElementById('cv-content');
+            const opt = {
+                margin: 0.5,
+                filename: 'Afolayan_Favour_CV.pdf',
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2 },
+                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            
+            if (typeof html2pdf !== 'undefined') {
+                html2pdf().set(opt).from(element).save();
+            } else {
+                downloadAsPDF();
+            }
+        }
+    </script>
+</body>
+</html>
